@@ -6,7 +6,7 @@ mem_hack: main.o tools.o routines.o hack.o cloop.o
 main.o: main.c tools.h routines.h hack.h cloop.h
 	cc -c main.c
 
-tools.o:
+tools.o: tools.c
 	cc -c tools.c
 
 routines.o: routines.c tools.h hack.h
