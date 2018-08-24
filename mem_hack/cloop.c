@@ -19,6 +19,9 @@ int cloop(void* hackable_value) {
 			case 'h':
 				hack_routine(hackable_value);
 				break;
+			case 'c':
+				change_value();
+				break;
 			default:
 			        default_routine();
 				break;

@@ -11,5 +11,5 @@ void update(int* hackable_val ){
 }
 
 void note(){
-	puts("\n\n\nPress (u) to update values, (h) to hack, or (q) to quite ..");
+	puts("\n\n\n(u)pdate, (h)ack, (c)hange, or (q)uite ..");
 }
