@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "colorslib.h"
 
 void writeMemData(void* address, int data){
 	int* ptr = (int*)address;
@@ -6,12 +7,12 @@ void writeMemData(void* address, int data){
 	*ptr = data;
 	if (*ptr == data){
 		printf("\n[+]Hacking succeeded, reading the data ..\n");
-		printf("\n[*]reading the data from the specified address .. \n\taddress: %p\n\tdata: %i\n",address, *(int*)address);
+		printf("\n[%s*%s]reading the data from the specified address .. \n\taddress: %p\n\tdata: %i\n",COLOR_GREEN,COLOR_RESET,address, *(int*)address);
 	}else if (*ptr != data){
-		printf("[-]Hacking faild, mostly didn't have the permission to write to the specified address !");
+		printf("[%s-%s]Hacking faild, mostly didn't have the permission to write to the specified address !",COLOR_RED,COLOR_RESET);
 	}
 	else {
-		printf("[-]some sort of odd error happened !");
+		printf("[%s-%s]some sort of odd error happened !",COLOR_RED,COLOR_RESET);
 	}
 
 }
