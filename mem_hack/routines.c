@@ -19,7 +19,7 @@ void hack_routine(int* hackable_value){
 
 void default_routine(){
 	clear();
-	puts("undefined key !");
+	printf(" Undefined command recived !, Please check the line below .. ");
 	note();
 }
 
@@ -34,7 +34,6 @@ void change_value(){
 
 int quite_routine(){
 	clear();
-	puts("Quitting .. ");
 	return 0;
 }
 

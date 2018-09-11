@@ -1,14 +1,21 @@
 #include <stdio.h>
+#include "tools.h"
 #include "routines.h"
 
 int cloop(void* hackable_value) {
 
+	char rejected[] = {
+	'\n',
+	'\r',
+	'\0'
+	};
+	
 	char c;
 	int first_use = 1;
 
 	if (first_use == 1) {update_routine(hackable_value);}
 	while ((c = getchar()) != EOF) {
-	if (c != '\n'){
+	if (check(c,rejected)){
 		switch(c){
 			case 'u':
 				update_routine(hackable_value);
