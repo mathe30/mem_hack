@@ -6,7 +6,7 @@ void writeMemData(void* address, int data){
 	printf("\n[*]Hacking .. \n\twriting %i to address %p\n",data ,address);
 	*ptr = data;
 	if (*ptr == data){
-		printf("\n[+]Hacking succeeded, reading the data ..\n");
+		printf("\n[%s+%s]Hacking succeeded, reading the data ..\n",COLOR_GREEN,COLOR_RESET);
 		printf("\n[%s*%s]reading the data from the specified address .. \n\taddress: %p\n\tdata: %i\n",COLOR_GREEN,COLOR_RESET,address, *(int*)address);
 	}else if (*ptr != data){
 		printf("[%s-%s]Hacking faild, mostly didn't have the permission to write to the specified address !",COLOR_RED,COLOR_RESET);
