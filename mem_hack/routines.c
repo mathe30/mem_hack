@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "tools.h"
 #include "hack.h"
+#include "colorslib.h"
 
 extern int hackable_value;
 
@@ -19,7 +20,7 @@ void hack_routine(int* hackable_value){
 
 void default_routine(){
 	clear();
-	printf(" Undefined command recived !, Please check the line below .. ");
+	printf("%s Undefined command recived !, Please check the line below .. %s",COLOR_RED, COLOR_RESET);
 	note();
 }
 
