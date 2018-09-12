@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
 void clear(){
 	system("clear");
 }
@@ -16,12 +16,15 @@ void note(){
 
 int check(char c, char* Rejected){
 	int tmp;
-
-	for (int i=0; Rejected[i] != '\0'; i++){
+	if (sizeof(c) > 1 ) {
+		return 0;
+	}
+	else {
+		for (int i=0; Rejected[i] != '\0'; i++){
 		if (c == Rejected[i]){
 			return 0;
-		} 
+		}
 	}
-
 	return 1;
+	}
 }
